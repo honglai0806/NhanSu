@@ -1,0 +1,55 @@
+.time-slot-area {
+  width: 100%;
+  height: 100px;
+  border: solid rgb(233, 230, 230) 1px;
+  border-radius: 4px;
+  overflow: auto;
+}
+.cursor-hover {
+  cursor: pointer;
+}
+.text {
+  text-align: center;
+}
+.color {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 12px;
+  font-weight: 500;
+}
+.border-left {
+  border-left: 1px solid #dee2e6;
+}
+table {
+  overflow-x: auto;
+  width: 100%;
+}
+thead {
+  background: #eaebef;
+}
+th {
+  padding: 15px 20px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  color: #2f373d;
+}
+
+tbody tr:nth-child(odd) {
+  background: #f7f8fa;
+}
+p {
+  margin-bottom: 0;
+}
+td {
+  padding: 15px 20px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #2f373d;
+}
+/* i {
+  color: #000;
+  font-size: 24px;
+} */
+tr:last-child {
+  border-bottom: 2px solid #f1f1f1;
+}

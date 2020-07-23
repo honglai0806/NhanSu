@@ -1,0 +1,110 @@
+<div class="card">
+  <div class="card-header">
+    <div class="row">
+      <div class="col">
+        <h3>Phòng ban </h3>
+        <!-- <select [(ngModel)]="customerTypeId" (change)="loadCustomer()">
+                    <option value="0"> --- All ---</option>
+                    <option *ngFor="let aCUT of customerTypes" value="{{aCUT.id}}">
+                        {{aCUT.name}}
+                    </option>
+                </select> -->
+      </div>
+      <div class="col-auto">
+        <button type="button" (click)="openAdd()" class="btn btn-primary"><i class="fa fa-plus"></i>
+          Thêm</button>
+      </div>
+    </div>
+  </div>
+  <div class="m-admMembers">
+    <div class="m-contentMembers">
+      <div class="m-tableMeber">
+        <div class="table-responsize">
+            <table>
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Phòng ban</th>
+                        <th>Quản lý</th>
+                        <th>Địa chỉ</th>
+                        <th colspan="2" class="text-center border-left">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr >
+                        <td>1</td>
+                        <td>Hành chính</td>
+                        <td>Manager</td>
+                        <td>201</td>
+                        <td class="text-center border-left">
+                            <img class="cursor" (click)="openModalEdit(templateEdit)"
+                                src='../../../assets/img/edit.png'>
+                        </td>
+                    </tr>
+                    <tr >
+                      <td>2</td>
+                      <td>Hành chính</td>
+                      <td>Manager</td>
+                      <td>201</td>
+                      <td class="text-center border-left">
+                          <img class="cursor" (click)="openModalEdit(templateEdit)"
+                              src='../../../assets/img/edit.png'>
+                      </td>
+                  </tr>
+                  <tr >
+                    <td>3</td>
+                    <td>Hành chính</td>
+                    <td>Manager</td>
+                    <td>201</td>
+                    <td class="text-center border-left">
+                        <img class="cursor" (click)="openModalEdit(templateEdit)"
+                            src='../../../assets/img/edit.png'>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- <div class="pagination-bottom text-center">
+            <app-pagination [totalRecords]="10" [recordsPerPage]="2" (onPageChange)="displayActivePage($event)">
+            </app-pagination>
+        </div> -->
+    </div>
+    </div>
+  </div>
+</div>
+
+
+<div bsModal #editModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="dialog-child-name">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form [formGroup]="workingTimeForm" (ngSubmit)="save()">
+        <div class="modal-header">
+          <h4 id="dialog-child-name" class="modal-title pull-left">Thêm phòng ban</h4>
+          <!-- <button type="button" class="close pull-right" aria-label="Close" (click)="hideModal()">
+          <span aria-hidden="true">&times;</span>
+        </button> -->
+        </div>
+        <div class="modal-body">
+
+          <div class="form-group">
+            <label for="name">Tên phòng ban</label>
+            <input type="text" class="form-control" id="name" formControlName="name">
+          </div>
+          <div class="form-group">
+            <label for="name">Người quản lý</label>
+            <input type="text" class="form-control" id="name" formControlName="name">
+          </div>
+          <div class="form-group">
+            <label for="bio">Địa chỉ</label>
+            <textarea class="form-control" id="bio" formControlName="bio" rows="3"></textarea>
+          </div>
+        
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary">Đóng</button>
+          <button type="submit" class="btn btn-primary">Lưu</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
